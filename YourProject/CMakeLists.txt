@@ -14,14 +14,14 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
 # 包含源代码文件
 include_directories(${CMAKE_SOURCE_DIR}/src)
 
-# 手动指定源文件，确保这些文件存在于您的 src 目录下
+# 手动指定源文件
 set(SOURCES
     ${CMAKE_SOURCE_DIR}/src/main.cpp
     ${CMAKE_SOURCE_DIR}/src/Logger.cpp
     ${CMAKE_SOURCE_DIR}/src/SmartVehHandler.cpp
 )
 
-# 确保 SOURCES 变量被填充
+# 输出 SOURCES 变量，确保文件路径正确
 message("SOURCES = ${SOURCES}")
 
 # 创建共享库（DLL）
