@@ -11,10 +11,10 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
 
-# 包含源代码目录
+# 包含源代码文件
 include_directories(${CMAKE_SOURCE_DIR}/src)
 
-# 手动指定源文件
+# 手动指定源文件，确保这些文件存在于您的 src 目录下
 set(SOURCES
     ${CMAKE_SOURCE_DIR}/src/main.cpp
     ${CMAKE_SOURCE_DIR}/src/Logger.cpp
