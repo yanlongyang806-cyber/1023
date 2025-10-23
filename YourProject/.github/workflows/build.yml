@@ -1,0 +1,27 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main  # 仅在推送到 main 分支时构建
+  pull_request:
+    branches:
+      - main  # 仅在创建 PR 时构建
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 使用 Ubuntu 环境构建
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up CMake
+        uses: actions/setup-cmake@v1
+
+      - name: Build with CMake
+        run: |
+          mkdir build
+          cd build
+          cmake ../  # 确保正确指向父目录，即项目根目录
+          cmake --build .
