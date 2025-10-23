@@ -23,5 +23,5 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake ../  # 确保正确指向父目录，即项目根目录
+          cmake ..  # 使用 .. 指向父目录，即项目根目录
           cmake --build .
